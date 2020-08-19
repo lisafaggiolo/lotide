@@ -8,9 +8,7 @@ const assertEqual = (actual, expected) => {
   } else {
     console.log(errorMsg);
   }
-
    
-    
 };
 
 assertEqual('Lighthouse Labs', 'Bootcamp');

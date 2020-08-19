@@ -13,7 +13,7 @@ const assertEqual = (actual, expected) => {
 
 
 
-const eqArrays = (actual, expected) => {
+const assertArraysEqua = (actual, expected) => {
  
   // if length is not equal
   if (actual.length !== expected.length) {
@@ -32,4 +32,4 @@ const eqArrays = (actual, expected) => {
 };
 
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+assertEqual(assertArraysEqual([1, 2, 3], [1, 2, 3]), true); // => should PASS
