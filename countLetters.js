@@ -15,12 +15,12 @@ const assertEqual = (actual, expected) => {
 
 
 const countLetters = (string) => {
-  const objLetterCount = {};
+  let objLetterCount = {};
   
   //must divide the string in an array
-  const sentence1 = string.replace(/\s+/g, '');
-  const letters = sentence1.split('');
-  
+  let letters = string.split(' ').join('');
+
+  console.log(letters); 
   // console.log(letters);
   
   
@@ -38,7 +38,6 @@ const countLetters = (string) => {
 
 }
 
-const result1 = console.log(countLetters('LHL'));
+const result1 = (countLetters('LHL'));
 console.log(result1); //should return results indicating that L appears twice, and H once.
-
-assertEqual(result1["H"], 1); //true
+assertEqual(result1['H'], 1); //true
