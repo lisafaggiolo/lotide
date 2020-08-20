@@ -57,10 +57,10 @@ const letterPositions = (sentence) => {
   }
   console.log(results);
   //loop to add the indexes to their respective letters
-  
+  console.log(results);
   return results;
 }
 
 
-letterPositions('Hello');
-assertEqual(assertArraysEqual(letterPositions("hello").e, [1]));
+const result1 = letterPositions('Hello');
+assertEqual(assertArraysEqual(result1.e, [1]), true);
