@@ -1,20 +1,8 @@
-const assertEqual = (actual, expected) => {
-  const errorMsg = `🤕 Assertion Failed: ${actual} !== ${expected}`;
-  const passMsg = `😀 Assertion Passed: ${actual} === ${expected}`;
-  
-  if (actual === expected) {
-    console.log(passMsg);
-  } else {
-    console.log(errorMsg);
-  }
-   
-};
+const assertEqual = require('./assertEqual')
 
 const tail = list => {
   return list.slice(1);
 }
 
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-console.log(tail(words)); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3)
+module.exports = tail;
