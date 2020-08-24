@@ -1,18 +1,4 @@
- 
-const assertEqual = (actual, expected) => {
-  const errorMsg = `🤕 Assertion Failed: ${actual} !== ${expected}`;
-  const passMsg = `😀 Assertion Passed: ${actual} === ${expected}`;
-  
-  if (actual === expected) {
-    console.log(passMsg);
-  } else {
-    console.log(errorMsg);
-  }
-};
-
-
-
-
+const assertEqual = require('./assertEqual')
 
 const countLetters = (string) => {
   let objLetterCount = {};
@@ -38,6 +24,8 @@ const countLetters = (string) => {
 
 };
 
-const result1 = (countLetters('LHL'));
-console.log(result1); //should return results indicating that L appears twice, and H once.
-assertEqual(result1['H'], 1); //true
+
+module.exports = countLetters;
+//const result1 = (countLetters('LHL'));
+//console.log(result1); //should return results indicating that L appears twice, and H once.
+//assertEqual(result1['H'], 1); //true

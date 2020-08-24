@@ -1,40 +1,5 @@
-//TEST/ASSERT FUNCTIONS
-const assertEqual = (actual, expected) => {
-  const errorMsg = `🤕 Assertion Failed: ${actual} !== ${expected}`;
-  const passMsg = `😀 Assertion Passed: ${actual} === ${expected}`;
-  
-  if (actual === expected) {
-    console.log(passMsg);
-  } else {
-    console.log(errorMsg);
-  }
-   
-};
 
-
-const assertArraysEqual = (actual, expected) => {
- 
-  // if length is not equal
-  if (actual.length !== expected.length) {
-    return false;
-  } else {
-  // comparing each element of array
-    for (let i = 0; i < actual.length; i++) {
-      if (actual[i] === expected[i]) {
-        return true;
-      
-      } else {
-        return false;
-      }
-    }
-  }
-};
-
-
-
-
-
-
+const assertArraysEqual = require('./assertArraysEqual');
 
 let middle = (array) => {
 
@@ -61,22 +26,5 @@ let middle = (array) => {
   return midArray;
 };
 
+module.exports = middle;
 
-
-
-
-
-
-
-
-
-assertEqual(assertArraysEqual(middle([1, 2, 3]), [2]), true); // => should PASS
-
-console.log(middle([1])); // => []
-console.log(middle(([1, 2]))); // => []
-
-console.log(middle([1, 2, 3])); // => [2]
-console.log(middle([1, 2, 3, 4, 5])); // => [3]
-
-console.log(middle([1, 2, 3, 4])); // => [2, 3]
-console.log(middle([1, 2, 3, 4, 5, 6])); // => [3, 4]
