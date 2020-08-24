@@ -8,7 +8,7 @@ const assertEqual = (actual, expected) => {
   } else {
     console.log(errorMsg);
   }
-}
+};
 
 
 
@@ -20,11 +20,11 @@ const countLetters = (string) => {
   //must divide the string in an array
   let letters = string.split(' ').join('');
 
-  console.log(letters); 
+  console.log(letters);
   // console.log(letters);
   
   
-  for (let letter of letters){
+  for (let letter of letters) {
     if (objLetterCount[letter] === undefined) {
       objLetterCount[letter] = 1;
 
@@ -36,7 +36,7 @@ const countLetters = (string) => {
   
   return objLetterCount;
 
-}
+};
 
 const result1 = (countLetters('LHL'));
 console.log(result1); //should return results indicating that L appears twice, and H once.

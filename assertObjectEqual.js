@@ -8,12 +8,12 @@ const assertObjectEqual = (actual, expected) => {
   const errorMsg = `🤕 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`;
   const passMsg = `😀 Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`;
   
-  let result = eqObjects(actual, expected) 
+  let result = eqObjects(actual, expected);
 
   if (result) {
-    console.log(passMsg)
+    console.log(passMsg);
   } else {
-    console.log(errorMsg)
+    console.log(errorMsg);
   }
 };
 
@@ -21,28 +21,28 @@ const assertObjectEqual = (actual, expected) => {
 
 const eqObjects = (object1, object2) => {
 
-  let result = true 
+  let result = true;
   //figure out both object's length
-  const objLength1 = Object.keys(object1).length  
-  const objLength2 = Object.keys(object2).length
+  const objLength1 = Object.keys(object1).length;
+  const objLength2 = Object.keys(object2).length;
   
   //find out if length of both objects are the same
-  if (objLength2 !== objLength1){
+  if (objLength2 !== objLength1) {
     result = false;
-  } 
+  }
 
   
-  for (let elem in object1){
+  for (let elem in object1) {
     //find out if objects are arrays
-    if (object1[elem] !== object2[elem]){
-      //if object 
-      result = false
+    if (object1[elem] !== object2[elem]) {
+      //if object
+      result = false;
       
     }
   }
 
   return result;
-}
+};
 
 
 const ab = { a: "1", b: "2" };
